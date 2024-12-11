@@ -1,0 +1,49 @@
+/* home.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../IMAGES/Background.jpg'); /* Adjusted for relative path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the body takes the full viewport height */
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-container p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #007BFF;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background-color: #0056b3;
+}

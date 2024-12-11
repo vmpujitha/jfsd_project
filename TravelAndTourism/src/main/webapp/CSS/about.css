@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Subtle off-white background */
+    margin: 0;
+    padding: 0;
+    color: #444;
+}
+
+header {
+    background-color: #0056b3; /* Vibrant blue */
+    padding: 10px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0056b3;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Flip Cards Section */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    border-radius: 10px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.card-back h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.card-back p {
+    font-size: 16px;
+    color: #555;
+}
+
+.card-back button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-back button:hover {
+    background-color: #003d80;
+}
+
+/* About Tourism Section */
+.about-tourism {
+    padding: 60px 20px;
+    background-color: #fff;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.about-left {
+    flex: 1;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444;
+    animation: fadeInLeft 1.5s ease-in-out;
+}
+
+.about-right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-right img {
+        width: 90%;
+    }
+}
